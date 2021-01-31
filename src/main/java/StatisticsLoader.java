@@ -1,11 +1,7 @@
-import javax.print.DocFlavor;
-import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class StatisticsLoader {
@@ -33,10 +29,10 @@ public class StatisticsLoader {
                 case "POWER_SUPPLY_CAPACITY":
                     stats.put("percentage", val);
                     break;
-                case "POWER_SUPPLY_CHARGE_FULL":
+                case "POWER_SUPPLY_ENERGY_FULL":
                     stats.put("full_capacity", val);
                     break;
-                case "POWER_SUPPLY_CHARGE_FULL_DESIGN":
+                case "POWER_SUPPLY_ENERGY_FULL_DESIGN":
                     stats.put("design_capacity", val);
                     break;
             }
